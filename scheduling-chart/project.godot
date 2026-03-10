@@ -13,4 +13,5 @@ config_version=5
 config/name="SchedulingChart"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/image="uid://d1k06kbdp8mox"
-config/icon="res://icon.svg"
+config/icon="uid://d1k06kbdp8mox"
+config/windows_native_icon="res://9ec80f144724ecc8425fc45e4da7bc9e.ico"
