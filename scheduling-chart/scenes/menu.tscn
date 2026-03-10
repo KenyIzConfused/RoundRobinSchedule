@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuqbpj311hu1"]
+
+[ext_resource type="Script" uid="uid://dkbqf81eb41cx" path="res://scenes/menu.gd" id="1_yqeox"]
+
+[sub_resource type="Gradient" id="Gradient_4h3mk"]
+offsets = PackedFloat32Array(0, 0.53333336, 1)
+colors = PackedColorArray(0, 0.38878062, 0.68185365, 1, 0.5519839, 0.34445882, 0.92104876, 1, 0.7583497, 0.28950655, 0.23747212, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yqeox"]
+gradient = SubResource("Gradient_4h3mk")
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_yqeox")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 653.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_yqeox")
+
+[node name="NewScheduleBtn" type="Button" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -15.5
+offset_right = 93.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.6039216, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "  New Schedule  "
+
+[node name="Label" type="Label" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Work Scheduling System"
+
+[node name="QuitBtn" type="Button" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 64.0
+offset_right = 80.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.7451217, 0, 0.19902506, 1)
+theme_override_font_sizes/font_size = 30
+text = "    QUIT    "
+
+[connection signal="pressed" from="Control/TextureRect/NewScheduleBtn" to="." method="_on_new_schedule_btn_pressed"]
+[connection signal="pressed" from="Control/TextureRect/QuitBtn" to="." method="_on_quit_btn_pressed"]

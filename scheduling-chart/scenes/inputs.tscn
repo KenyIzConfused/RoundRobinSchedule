@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dae4h1o4cay6j"]
+
+[node name="Inputs" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 659.0
+
+[node name="Panel" type="Panel" parent="Control"]
+modulate = Color(0, 0.5583066, 0.55420274, 1)
+self_modulate = Color(0, 0.60539156, 0.52985275, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
